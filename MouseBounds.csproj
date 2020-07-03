@@ -38,7 +38,7 @@
     <StartupObject>MouseBounds.App</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,15 +63,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DirectHotkey.cs" />
-    <Compile Include="ManagedScreen.cs" />
+    <Compile Include="DirectHotkey\DirectHotkey.cs" />
+    <Compile Include="Int32Point\ManagedScreen.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resolution.cs" />
-    <Compile Include="TrayIcon.cs" />
+    <Compile Include="Int32Point\Resolution.cs" />
+    <Compile Include="TrayIcon\TrayIcon.cs" />
     <Compile Include="User32.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -81,7 +81,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Int32Point.cs" />
+    <Compile Include="Int32Point\Int32Point.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -120,19 +120,20 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icon.ico">
+    <Resource Include="Resources\Icon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="IconActive.ico">
+    <Resource Include="Resources\IconActive.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="CursorIcon.png">
+    <Resource Include="Resources\CursorIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
