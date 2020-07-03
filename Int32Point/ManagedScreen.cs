@@ -4,8 +4,6 @@ using System.Drawing;
 using System.Windows;
 using System.Windows.Forms;
 
-//Avoid directly importing the System.Windows.Forms library in a WPF application
-
 namespace MouseBounds {
     public readonly struct ManagedScreen : IEquatable<ManagedScreen> {
         public readonly Screen Screen;
