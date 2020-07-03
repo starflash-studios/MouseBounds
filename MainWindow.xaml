@@ -1,0 +1,36 @@
+﻿<mah:MetroWindow x:Class="MouseBounds.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Closed="MetroWindow_Closed"
+        Closing="MetroWindow_Closing"
+        Background="#242424"
+        Deactivated="MetroWindow_Deactivated"
+        MinHeight="200" Height="200" MaxHeight="200"
+        MinWidth="400" Width="400" MaxWidth="400"
+        Title="MouseBounds" ResizeMode="CanMinimize">
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical">
+            <ToggleButton x:Name="StateToggle" Content="&lt;&lt;Inactive [F6]&gt;&gt;" FontSize="16" Height="75" Click="StateToggle_Click"/>
+            <Rectangle Height="12"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Active Screen:" Width="95"/>
+                <!--<mah:NumericUpDown x:Name="NumericX" Value="1920" Minimum="0" Maximum="1920" Width="91" ValueChanged="NumericX_ValueChanged"/>-->
+                <ComboBox x:Name="ComboActiveScreen" Width="91" SelectionChanged="ComboActiveScreen_SelectionChanged"/>
+                <Label Content="Keybinding:" Width="95"/>
+                <mah:HotKeyBox x:Name="SelectorHotKey" AreModifierKeysRequired="False" Width="91" KeyUp="SelectorHotKey_KeyUp"/>
+            </StackPanel>
+            <Rectangle Height="4"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Always On Top:" Width="95"/>
+                <!--<mah:NumericUpDown x:Name="NumericY" Value="1080" Minimum="0" Maximum="1080" Width="91" ValueChanged="NumericY_ValueChanged"/>-->
+                <CheckBox x:Name="CheckAoT" Width="91" Click="CheckAoT_Click"/>
+                <Label Content="Clamp:" Width="95"/>
+                <CheckBox x:Name="CheckClamp" Width="91" Click="CheckClamp_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</mah:MetroWindow>

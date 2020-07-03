@@ -1,0 +1,1 @@
+﻿namespace MouseBounds { public partial class App { } }
